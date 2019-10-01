@@ -53,7 +53,7 @@ function draw() {
 
         fill(0, 247, 255, 140);
       }
-      else if (frameCount > s * 0.87 && frameCount < s*1.55 && (a > z + width/3.6 && a < windowWidth - z && a < windowWidth - width/3.6 && a < windowWidth - width/3.6 - z && b > height/2 - z*1.1 && b < height/2 + z*1.157)) { // red
+      else if (frameCount > s * 0.87 && frameCount < s*1.55 && (a > z + width/3.6 && a < windowWidth - z && a < windowWidth - width/3.6 && a < windowWidth - width/3.6 - z && b > height/2 - z*1.1 && b < height/2 + z*1.11)) { // red
 
         fill(235, 52, 52, 140);
       }
