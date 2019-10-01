@@ -13,6 +13,7 @@ function setup() {
   c = 0;
   w = 0;
   y = 0;
+  z = 0;
 }
 
 function draw() {
@@ -24,9 +25,13 @@ function draw() {
   //GIUSTO
   var cof = 0.05;
   var r = 200;
+  var az = false;
 
   w += 20; // blue
-  if (frameCount > s * 1.55) { // dinamic violet background
+  if (frameCount > s * 0.87 && frameCount < s*1.55) { // dinamic red background
+    z += 20;
+  }
+  else if (frameCount > s * 1.55) { // dinamic violet background
     y += 20;
   }
 
@@ -40,10 +45,19 @@ function draw() {
         //|| (b < windowWidth - frameCount / cof && b > windowWidth - frameCount / cof - 19.7)
         ||
         (b < windowHeight - frameCount / cof && b > windowHeight - frameCount / cof - 21)) {
+
         fill(140, 0, 255);
+
+
       } else if ((a > w && a < windowWidth - w && b > w && b < windowHeight - w)) { // azzurro
+
         fill(0, 247, 255, 140);
-      } else if (frameCount > s * 1.55 && ((a > width / 2 && a < y + width / 2) || (a < width / 2 && a > width / 2 - y) || a == width / 2)) { // dinamic violet background
+      }
+      else if (frameCount > s * 0.87 && frameCount < s*1.55 && (a > z + 550 && a < windowWidth - z && a < windowWidth - 550 && a < windowWidth - 550 - z)) { // red
+
+        fill(235, 52, 52, 140);
+      }
+      else if (frameCount > s * 1.55 && ((a > width / 2 && a < y + width / 2) || (a < width / 2 && a > width / 2 - y) || a == width / 2)) { // dinamic violet background
         fill(140, 0, 255, 160);
       } else {
         fill(0, 102, 153, 160); // base color
