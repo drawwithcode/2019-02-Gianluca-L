@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'matrix code nfi';
+  src: url('addons/matrix code nfi.ttf')  format('truetype');
+}
 body {
       font-family: 'matrix code nfi';
       }
